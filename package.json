@@ -1,0 +1,34 @@
+{
+  "name": "gametools",
+  "version": "1.0.0",
+  "description": "A collection of tools for planning games",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryan28561/gametools.git"
+  },
+  "keywords": [
+    "gamedesign"
+  ],
+  "author": "ryan28561",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryan28561/gametools/issues"
+  },
+  "homepage": "https://github.com/ryan28561/gametools#readme",
+  "dependencies": {
+    "mobx": "^5.15.4",
+    "mobx-react": "^6.2.2",
+    "react": "^16.13.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.14.1",
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.9.5",
+    "webpack": "^4.43.0",
+    "sass-loader": "^8.0.2"
+  }
+}
