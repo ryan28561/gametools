@@ -1,0 +1,28 @@
+
+// GAME CHOOSER
+.game-chooser {
+  height: 100%;
+  border-right: solid 1px;
+  @include theme-aware('border-color', 'border-color');
+  width: 7rem;
+  padding-top: 1rem;
+  display: grid;
+  grid-row-gap: 1rem;
+  justify-content: center;
+  .game-button {
+    width: 5rem;
+    height: 5rem;
+    font-size: 4rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    text-align: center;
+    @include theme-aware('background-color', 'button-color');
+    color: inherit;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    &:hover {
+      @include theme-aware('background-color', 'button-hover');
+    }
+  }
+}

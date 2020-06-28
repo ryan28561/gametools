@@ -4,6 +4,8 @@
   "description": "A collection of tools for planning games",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server --hotOnly",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,13 +24,19 @@
   "dependencies": {
     "mobx": "^5.15.4",
     "mobx-react": "^6.2.2",
-    "react": "^16.13.1"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "style-loader": "^1.2.1"
   },
   "devDependencies": {
+    "css-loader": "^3.6.0",
+    "html-webpack-plugin": "^4.3.0",
     "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
     "ts-loader": "^7.0.5",
     "typescript": "^3.9.5",
     "webpack": "^4.43.0",
-    "sass-loader": "^8.0.2"
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   }
 }

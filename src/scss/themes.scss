@@ -1,0 +1,57 @@
+$themes: (
+  default: (
+    surface-0: #222,
+    surface-1: lighten(#222, 10%),
+    surface-2: lighten(#222, 15%),
+    primary: #00bd23,
+    header: lighten(#00bd23, 5%),
+    text: #dedede,
+    text-bold: #fff,
+    border-color: #777,
+    button-color: rgba(255, 255, 255, 0.2),
+    button-hover: rgba(255, 255, 255, 0.3),
+  ),
+  light: (
+    surface-0: #eee,
+    surface-1: darken(#eee, 10%),
+    surface-2: darken(#eee, 15%),
+    primary: #00bd23,
+    header: darken(#00bd23, 5%),
+    text: #111,
+    text-bold: #fff,
+    border-color: #999,
+    button-color: rgba(0, 0, 0, 0.2),
+    button-hover: rgba(0, 0, 0, 0.3),
+  ),
+);
+
+
+/**
+ * https://blog.prototypr.io/how-i-theme-my-react-app-with-sass-414e8f905541
+ * theme-aware - Change color of a css property based on the currently active theme
+ *
+ * @param  {key}     CSS property
+ * @param  {color}   Color name defined in the themes under _color-palette.scss
+ *
+ * @example - @include theme-aware('background', 'color-background');
+ * @returns - background: #FFF;
+ */
+@mixin theme-aware($key, $color) {
+  @each $theme-name, $theme-color in $themes {
+    .theme-#{$theme-name} & {
+      #{$key}: map-get(map-get($themes, $theme-name), $color);
+    }
+  }
+}
+
+//Doesn't work :(
+//$currentTheme: 'default';
+//@mixin themed {
+//  @each $theme, $theme-color in $themes {
+//    .theme-#{$theme} & {
+//      $currentTheme: $theme !global;
+//      @content
+//    }
+//  }
+//  $currentTheme: 'default';
+//}

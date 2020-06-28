@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "target": "esnext",
+    "module": "esnext",
+    "baseUrl": ".",
+    "paths": {
+      "gt_components/*": ["src/components/*"],
+      "gt_containers/*": ["src/containers/*"],
+      "gt_utils/*": ["src/utils/*"],
+      "gt_images/*": ["src/images/*"]
+    },
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true
+  }
+}
