@@ -1,18 +1,18 @@
-
 // GAME CHOOSER
 .game-chooser {
   height: 100%;
   border-right: solid 1px;
   @include theme-aware('border-color', 'border-color');
-  width: 7rem;
+  width: 5rem;
   padding-top: 1rem;
   display: grid;
+  grid-auto-rows: 3rem;
   grid-row-gap: 1rem;
   justify-content: center;
   .game-button {
-    width: 5rem;
-    height: 5rem;
-    font-size: 4rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
     border-radius: 0.5rem;
     text-align: center;
@@ -21,8 +21,26 @@
     border: none;
     cursor: pointer;
     outline: none;
-    &:hover {
+    &:not(.active):hover {
       @include theme-aware('background-color', 'button-hover');
     }
+    &.active {
+      box-shadow: 0 0 0 .25rem #fff;
+    }
   }
+}
+
+.dashboard {
+  width: 100%;
+}
+
+// HEADER
+.header {
+  @include theme-aware('background-color', 'header');
+  width: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
 }

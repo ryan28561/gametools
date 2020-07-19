@@ -1,0 +1,46 @@
+button {
+  @include theme-aware('background-color', 'button-color');
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  border: solid 1px;
+  @include theme-aware('border-color', 'border-color');
+  cursor: pointer;
+  transition: all 300ms;
+  &:hover {
+    @include theme-aware('background-color', 'button-hover');
+  }
+}
+
+.form-group {
+  label {
+    display: block;
+  }
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+form {
+  .action-buttons {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    button {
+      padding: 0.5rem;
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+input[type='text'] {
+  @include theme-aware('background-color', 'input');
+  border: none;
+  padding: 0.5rem;
+  color: inherit;
+  &:focus {
+    @include theme-aware('background-color', 'input-focus');
+    border: none;
+    outline: none;
+  }
+}

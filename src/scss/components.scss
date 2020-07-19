@@ -1,0 +1,20 @@
+.modal-wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  @include theme-aware('background-color', 'modal-backdrop');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.hide {
+    display: none;
+  }
+  .modal {
+    @include theme-aware('background-color', 'modal');
+    padding: 0.5rem;
+    font-size: inherit;
+    font-family: inherit;
+  }
+}

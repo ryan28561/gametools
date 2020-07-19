@@ -29,6 +29,7 @@
     "style-loader": "^1.2.1"
   },
   "devDependencies": {
+    "@types/react": "^16.9.41",
     "css-loader": "^3.6.0",
     "html-webpack-plugin": "^4.3.0",
     "node-sass": "^4.14.1",

@@ -4,12 +4,16 @@ $themes: (
     surface-1: lighten(#222, 10%),
     surface-2: lighten(#222, 15%),
     primary: #00bd23,
-    header: lighten(#00bd23, 5%),
+    header: lighten(#222, 10%),
     text: #dedede,
     text-bold: #fff,
     border-color: #777,
     button-color: rgba(255, 255, 255, 0.2),
     button-hover: rgba(255, 255, 255, 0.3),
+    modal-backdrop: rgba(0, 0, 0, 0.6),
+    modal: lighten(#222, 15%),
+    input: rgba(0, 0, 0, 0.3),
+    input-focus: rgba(0, 0, 0, 0.5),
   ),
   light: (
     surface-0: #eee,
@@ -22,6 +26,8 @@ $themes: (
     border-color: #999,
     button-color: rgba(0, 0, 0, 0.2),
     button-hover: rgba(0, 0, 0, 0.3),
+    input: rgba(255, 255, 255, 0.3),
+    input-focus: rgba(255, 255, 255, 0.5),
   ),
 );
 
